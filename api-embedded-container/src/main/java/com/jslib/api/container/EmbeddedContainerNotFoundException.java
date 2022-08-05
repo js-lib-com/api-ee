@@ -1,4 +1,4 @@
-package com.jslib.api.embedded.container;
+package com.jslib.api.container;
 
 public class EmbeddedContainerNotFoundException extends EmbeddedContainerException
 {

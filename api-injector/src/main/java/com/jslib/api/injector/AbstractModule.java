@@ -3,8 +3,6 @@ package com.jslib.api.injector;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jslib.util.Params;
-
 public abstract class AbstractModule implements IModule
 {
   private final List<IBinding<?>> bindings = new ArrayList<>();
@@ -40,7 +38,7 @@ public abstract class AbstractModule implements IModule
    */
   protected <T> IBindingBuilder<T> bind(Class<T> type)
   {
-    Params.notNull(type, "Instance type");
+    assert type != null : "Instance type";
     IBindingBuilder<T> builder = injector.getBindingBuilder(type);
     bindings.add(builder.getBinding());
     return builder;
@@ -48,7 +46,7 @@ public abstract class AbstractModule implements IModule
 
   protected <T> IBindingBuilder<T> bindInstance(Class<T> type, T instance)
   {
-    Params.notNull(type, "Instance type");
+    assert type != null : "Instance type";
     IBindingBuilder<T> builder = injector.getBindingBuilder(type, instance);
     bindings.add(builder.getBinding());
     return builder;

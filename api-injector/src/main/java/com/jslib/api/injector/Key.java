@@ -3,8 +3,6 @@ package com.jslib.api.injector;
 import java.lang.annotation.Annotation;
 import java.util.Objects;
 
-import com.jslib.util.Strings;
-
 /**
  * Instance class key is a qualified type used to uniquely identify the instance class to retrieve. It is a compound key
  * with mandatory instance type and an optional qualifier; if missing, qualifier is null. Key type is immutable but

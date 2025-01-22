@@ -2,8 +2,6 @@ package com.jslib.api.injector;
 
 import java.lang.annotation.Annotation;
 
-import com.jslib.util.Classes;
-
 import jakarta.inject.Named;
 import jakarta.inject.Provider;
 
